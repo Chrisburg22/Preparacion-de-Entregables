@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [
+        ""
+      ],
+      "stopAtEntry": false,
+      "cwd": "c:/Users/Melisa Ramos/OneDrive - Universidad de Guadalajara/Estructura de Datos 2/ejercicios-youtube/Preparacion de Entregables/J14/preparacio-J14",
+      "environment": [],
+      "program": "c:/Users/Melisa Ramos/OneDrive - Universidad de Guadalajara/Estructura de Datos 2/ejercicios-youtube/Preparacion de Entregables/J14/preparacio-J14/build/Debug/outDebug",
+      "internalConsoleOptions": "openOnSessionStart",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "externalConsole": false,
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
+}
