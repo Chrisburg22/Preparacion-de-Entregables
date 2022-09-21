@@ -1,7 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
+#ifdef _WIN32
 #define CLEAR "cls"
+#elif defined(unix)||defined(__unix__)||defined(__uninx)||defined(__APPLE__)||defined(__MACH__)
+#define CLEAR "clear"
+#else
+#error "SO no soportado pra limpiar la pantalla"
+#endif
+
 #define TOTAL_PRACTICAS 7
 
 int main() {
@@ -29,5 +36,5 @@ int main() {
     }
     calificacionFinal /= TOTAL_PRACTICAS;
 
-    printf("\n\nCalificacion final: %d", calificacionFinal);
+    printf("\n\nCalificacion final: %d\n\n", calificacionFinal);
 }
