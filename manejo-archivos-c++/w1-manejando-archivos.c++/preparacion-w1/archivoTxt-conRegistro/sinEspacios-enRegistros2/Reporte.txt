@@ -1,0 +1,4 @@
+3|Total
+12345|Skurt
+12344|Kinat
+22123|Popis
