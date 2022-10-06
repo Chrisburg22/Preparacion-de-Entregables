@@ -13,9 +13,9 @@ public:
     void fijaNombre(string nombre){
          this->nombre = nombre;
     }
-    void fijarEdad(short e){
-        if( e >= 0){
-          edad = e; 
+    void fijarEdad(short edadx){
+        if( edadx >= 0){ //Condicionales para definir el valor de la propiedad
+          edad = edadx; 
         }
     }
 // METODOS GETTERS    
@@ -28,7 +28,7 @@ public:
 };
 
 int main(){
-    Persona personaje;
+    Persona persona;
     
     string nombre;
     short edad;
@@ -37,13 +37,13 @@ int main(){
 
     cout << "Dame su nombre: ";
     getline(cin, nombre);
-    personaje.fijaNombre(nombre);
+    persona.fijaNombre(nombre);
 
     cout << "Dame su edad: ";
     cin >> edad;
-    personaje.fijarEdad(edad);
+    persona.fijarEdad(edad);
   
-    cout << endl << "Nombre: " << personaje.dameNombre() << endl;
-    cout << "Edad: " << personaje.dameEdad() << endl;
+    cout << "Nombre: " << persona.dameNombre() << endl;
+    cout << "Edad: " << persona.dameEdad() << endl;
 
 }

@@ -13,9 +13,9 @@ public:
     void fijaNombre(string nombre){
          this->nombre = nombre;
     }
-    void fijarEdad(short edadx){
-        if( edadx >= 0){
-          edad = edadx; 
+    void fijarEdad(short e){
+        if( e >= 0){
+          edad = e; 
         }
     }
 // METODOS GETTERS    
@@ -28,22 +28,23 @@ public:
 };
 
 int main(){
-    Persona persona;
+    Persona personaje;
     
     string nombre;
     short edad;
 
     cout << "Los datos de un personaje" << endl << endl;
 
+//ENTRADA DE DATOS
     cout << "Dame su nombre: ";
-    getline(cin, nombre);
-    persona.fijaNombre(nombre);
-
+    getline(cin, nombre);//Recibe cadena de texto con espacios
     cout << "Dame su edad: ";
     cin >> edad;
-    persona.fijarEdad(edad);
+//COMPUTOS
+    personaje.fijaNombre(nombre);
+    personaje.fijarEdad(edad);
   
-    cout << "Nombre: " << persona.dameNombre() << endl;
-    cout << "Edad: " << persona.dameEdad() << endl;
+    cout << endl << "Nombre: " << personaje.dameNombre() << endl;
+    cout << "Edad: " << personaje.dameEdad() << endl;
 
 }
