@@ -4,6 +4,8 @@
         "random": "cpp",
         "ostream": "cpp",
         "*.tcc": "cpp",
-        "iomanip": "cpp"
+        "iomanip": "cpp",
+        "cstring": "cpp",
+        "iosfwd": "cpp"
     }
 }

@@ -1,0 +1,11 @@
+ Los establecidos en las “Reglas de Operación y Evaluación” del curso.
+ Cumplir con la fecha límite de entrega citada en el Excel de Actividades.
+
+Pruebas de Software 6 de 6
+
+ Calificación en base a cobertura de requerimientos y fecha de entrega.
+ Cumplir con Requerimientos de Valor Agregado en Código Fuente (hasta el req. “FF”).
+ Entrega en tres lenguajes, todos en el mismo archivo comprimido: C (ANSI), C++
+(ANSI) y Java.
+ Es indispensable la entrega de un programa cuyo código fuente sea completamente en
+idioma Español (a excepción de lo correspondiente a la API del lenguaje).

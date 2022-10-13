@@ -1,0 +1,109 @@
+IMPRECION DEL TITULO DE LA APLICACION
+
+Realizar la verificación de la fecha de forma tal que se imprima una y sola una de las
+siguientes salidas según corresponda:
+a) “Fecha válida”
+b) “Mes no válido”
+c) “Día no válido”
+...ninguna otra impresión a la consola, más que las citadas, sea impresa.
+
+Después de imprimir el resultado del punto anterior, mostrar el mensaje “Presione
+entrar para continuar . . .” y para continuar esperar a que se presione dicha tecla.
+
+REQUERIMIENTOS PARTICULARES 
+
+Variante 1: el código fuente para validación de la fecha use exclusivamente la selectiva
+if sin anidamientos y sin usar operador de condición ni banderas
+
+Variante 2: el código fuente para validación de la fecha use exclusivamente la selectiva
+if con anidamientos y sin usar operador de condición ni banderas
+
+Variante 3: el código fuente para validación de la fecha use una combinación de la
+selectiva if con la switch anidadas, usando switch para los casos de los meses y sin usar
+operador de condición ni banderas.
+
+REQUERIMIENTOS NO FUNCIONALES
+
+En caso de lenguaje C++/Java, para las banderas usar en lugar de variables tipo int el
+tipo bool/boolean.
+
+10. El código fuente de cada archivo cumpla con la siguiente estructura general de
+programa:
+          Declaración y definición de constantes
+          Declaración de variables globales
+          Prototipos de procedimientos/funciones
+          Definición de subrutinas
+          ...donde el código fuente de la función main cumpla con la siguiente estructura de
+          programa:
+          Declaración de variables para cómputo
+          Título de la aplicación
+          Cómputo de casos de prueba e impresión de resultados
+
+11.Implementar una función llamada esFechaValida(), la cual reciba 3 parámetros tipo
+entero “anio”, “mes” y “dia”, en dicho orden y devuelva el valor 1 solo si es una fecha
+válida ó 0 (cero) en caso contrario; en caso de C++/Java, devolver un tipo bool o
+boolean.
+
+12.Declarar dentro de esFechaValida() las variables (que sean necesarias) para
+almacenamiento de resultados del cómputo de datos de entrada
+
+13. Declarar una variable global nombrada “codigoErrorFecha” que sirva para almacenar el
+resultado de la validación, la cual durante la ejecución de la función esFechaValida() se
+establezca en 0 cuando sea el caso de “Fecha válida”, -1 en el caso de “Mes no válido”
+y -2 en el caso de “Día no válido”
+
+14. Implementar una función llamada dameCodigoErrorFecha() que devuelva el contenido
+de la variable global “codigoErrorFecha”
+
+15. Las funciones esFechaValida(), dameCodigoErrorFecha() y la variable global
+mencionada anteriormente, se encuentren dentro de un archivo de librería llamado
+“Fecha.h”
+
+16. Programar en la función main pruebas de caja negra “hardcodeados” a criterio propio,
+esto es, llamar a la función de validación (con parámetros para año, mes y día),
+pasándole argumentos de combinaciones de valores correctos e incorrectos, intentando
+corroborar que la función valida correctamente o falla en la etapa de pruebas.
+
+17. Realizar la verificación de la fecha de forma tal que se imprima una y sola una de las
+salidas descritas en el requerimiento 4.
+
+18. Llamar a la función de validación al menos 10 veces, mostrando los resultados de las
+pruebas según el requerimiento 4.
+
+19. Evitar imprimir a consola dentro de la librería “Fecha.h”.
+
+20. Todo valor izquierdo debe ser utilizado en el programa.
+
+21. Para los requerimientos 6, 7 y 8 se permite tener en la función de validación varias
+ocurrencias de la sentencia return, sin embargo es deseable evitarlo de ser posible.
+
+22. Para imprimir el mensaje a consola según el requerimiento 4, utilizar la estructura de
+control switch.
+
+23. El programa principal (main) sea el mismo código fuente en todas las variantes.
+
+24. Crear una subcarpeta variante4 con un archivo fuente para una aplicación de consola
+que cumpla con los siguientes requerimientos.
+
+25. Para determinar cada una de las salidas descritas en el requerimiento 4 se utilicen 3
+banderas fechaValida, mesValido, diaValido y en la subrutina esFechaValida() aplicar
+un y solo un return.
+
+26. A toda variable le sea asignado el valor que le corresponda una vez y solo una vez.
+
+Requerimientos para Puntos Extras
+
+27. En el caso de entregar en lenguajes C o C++, declarar la variable global
+“codigoErrorFecha” de modo que esta sea visible solo dentro del archivo donde se
+declare.
+
+28. Entregar en el mismo comprimido carpetas diferentes para cada lenguaje:
+    a) Una nombrada “C” con los códigos fuente en C (ANSI);
+    b) Una nombrada “C++” con los códigos fuente en C++;
+    c) Una nombrada “Java” con los códigos fuente en Java;
+    d) Una nombrada “C#” con los códigos fuente en C#;
+    e) Una nombrada “English” con los códigos fuente escritos en su totalidad en inglés
+    (solo para el lenguaje de su preferencia).
+    ...las primeras opciones se redacten absolutamente en español y la última
+    absolutamente en inglés. Si incluye 2 carpetas con lenguajes OO, uno de ellos puede
+    redactarse en inglés y sin necesidad de entregar la versión en español para ese lenguaje.

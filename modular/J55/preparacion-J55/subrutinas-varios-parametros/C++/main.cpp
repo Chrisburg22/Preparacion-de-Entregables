@@ -9,7 +9,7 @@
 #error "SO no soportado pra limpiar la pantalla"
 #endif
 
-#define CARACTERES_POR_FILA 80;
+#define CARACTERES_POR_FILA 80
 
 using namespace std;
 void centrarTexto( string texto, char relleno  );
