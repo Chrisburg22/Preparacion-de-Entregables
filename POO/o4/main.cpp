@@ -9,6 +9,11 @@ class Libro{
     float precio;
     char genero;
 public:
+    Libro(){
+        nombre= "Nombre libro";
+        precio = 0;
+        genero = ' ';
+    }
     void setNombre(string nombre){
         this->nombre = nombre;
     }
@@ -26,6 +31,20 @@ public:
     }
     char getGenero(){
         return genero;
+    }
+    Libro llenaDatos(string nombre, float precio, char genero){
+        Libro libro;
+
+        libro.setNombre(nombre);
+        libro.setPrecio(precio);
+        libro.setGenero(genero);
+
+        cout << endl << "Datos recibidos" << endl 
+             << "Nombre " << "libro: " << libro.getNombre() << endl
+             << "Precio " << "libro: " << libro.getPrecio() << endl
+             << "Genero " << "libro: " << libro.getGenero() << endl;
+
+        return libro;
     }
 };
 
@@ -64,38 +83,42 @@ int main(){
     Libro libros[MAXIMO_LIBROS];
     Arbol arbol;
 
-    cout << "                            Arboles de Libros" << endl << endl;
-    cout << "                            GENEROS DE LIBROS" << endl;
-    cout << "C=Economia  S=Suspenso  L=Literatura  F=Ficcion A=Autocrecimiento  E=Educacion" << endl << endl;
-    cout << "***Creando un nuevo arbol***" << endl;
-    cout << " Nuevo codigo de arbol: ";
+    cout << "***TREE BOOKS***" << endl << endl;
+    cout << "GENEROS DE LIBROS" << endl;
+    cout << " C=Economia" << endl 
+         << " S=Suspenso" << endl
+         << " L=Literatura" << endl
+         << " F=Ficcion" << endl
+         << " A=Autocrecimiento" << endl
+         << " E=Educacion" << endl << endl
+         << "Creando Tree book" << endl
+         << "Crea un codigo para el Tree book: ";
     cin >> codigo;
     cin.ignore();
     
-    cout << endl << "***Llenando el arbol de libros***" << endl;
+    cout << endl << "**Agregando libros**" << endl;
+    
     for(int i=0 ; i<MAXIMO_LIBROS; i++){
         cout << "Creando datos del libro #" << i+1 << endl;
         cout << " Nombre: " ;
         getline(cin, nombre);
-        libros[i].setNombre(nombre);
         
         cout << " Precio: ";
         cin >> precio;
         cin.ignore();
-        libros[i].setPrecio(precio);
 
         cout << " Genero: ";
         cin >> genero;
         cin.ignore();
-        libros[i].setGenero(genero);
 
+        libros[i] = libros[i].llenaDatos(nombre, precio, genero);
         cout << endl;
     }
 
     arbol.setCodigo(codigo);
     arbol.setLibros(libros);
 
-    cout << endl << "Codigo del Arbol libros: " << arbol.getCodigo() << endl;
+    cout << endl << "Codigo Tree book: " << arbol.getCodigo() << endl;
     arbol.imprimeLibros();
 
     return 0;

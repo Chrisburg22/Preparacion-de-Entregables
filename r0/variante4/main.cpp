@@ -2,7 +2,7 @@
  * DosTres
  * Tiempo: 3:00
  * Ejercicio0_EDA2
- * r0eda21122b Variante 2
+ * r0eda21122b Variante 1
 */
 
 #include <iostream>

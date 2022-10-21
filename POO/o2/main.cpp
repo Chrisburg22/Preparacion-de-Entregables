@@ -64,15 +64,21 @@ int main(){
     Libro libros[MAXIMO_LIBROS];
     Arbol arbol;
 
-    cout << "                            Arboles de Libros" << endl << endl;
-    cout << "                            GENEROS DE LIBROS" << endl;
-    cout << "C=Economia  S=Suspenso  L=Literatura  F=Ficcion A=Autocrecimiento  E=Educacion" << endl << endl;
-    cout << "***Creando un nuevo arbol***" << endl;
-    cout << " Nuevo codigo de arbol: ";
+    cout << "***TREE BOOKS***" << endl << endl;
+    cout << "GENEROS DE LIBROS" << endl;
+    cout << " C=Economia" << endl 
+         << " S=Suspenso" << endl
+         << " L=Literatura" << endl
+         << " F=Ficcion" << endl
+         << " A=Autocrecimiento" << endl
+         << " E=Educacion" << endl << endl
+         << "Creando Tree book" << endl
+         << "Crea un codigo para el Tree book: ";
     cin >> codigo;
     cin.ignore();
     
-    cout << endl << "***Llenando el arbol de libros***" << endl;
+    cout << endl << "**Agregando libros**" << endl;
+    
     for(int i=0 ; i<MAXIMO_LIBROS; i++){
         cout << "Creando datos del libro #" << i+1 << endl;
         cout << " Nombre: " ;
@@ -95,7 +101,7 @@ int main(){
     arbol.setCodigo(codigo);
     arbol.setLibros(libros);
 
-    cout << endl << "Codigo del Arbol libros: " << arbol.getCodigo() << endl;
+    cout << endl << "Codigo Tree book: " << arbol.getCodigo() << endl;
     arbol.imprimeLibros();
 
     return 0;

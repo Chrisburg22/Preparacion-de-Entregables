@@ -1,0 +1,24 @@
+DICCIONARIO DE ACTORES  
+Tener congruencia con el nombre del actor, dependiendo lo que vaya a ralizar.
+Evaluacion---Evaluador
+Diseñar un actor para encargarse de la asistencia y una para encargarse de evaluar la materia.
+Meditar el nombre del actor que calculara la asistencía
+Materia.evaluacion= < vease actor Evaluacion>
+
+DISEÑO JERRARQUICO
+Modificar el mapa jerarquico agregando un actor para la asistencia y otro para calcular las evaluaciones.
+
+TABLA DE ACTORES
+Modificar las constantes simblicas TAM para y hacerlas mas especificas. Las cuales estan ligadas a las listas.
+Modificar la propiedad ultimo de todos los gestores, ya que es algo que no esta siendo congruente.(Llamar cantidadAlgo)
+Modificar los que son plulares o singulares.En esta caso por ejemplo en cantidadFaltas o cantidadRetarsos
+
+DIAGRAMA UML 
+Las clases que van a gestionarse no deben de utilizar cout y cin, asi que deben modificarse.
+Cambiar flechas de herencia por flechas de asociación 
+Cambiar los parametros para agregar clases a mis gestores.
+Modificar el tipo de dato evaluacion de la calse materia. Hacerlo de tipo evaluación
+trasladar los parametros de fijarEvaluacion como pripiedades de la clase materia.
+Los metodos getters y  setter deben tener el mismo nombre de la propiedad que vamos a modular.
+
+Emparejar el Diagrama UML y la tabla de actores.

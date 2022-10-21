@@ -7,5 +7,7 @@
         "iomanip": "cpp",
         "cstring": "cpp",
         "iosfwd": "cpp"
-    }
+    },
+    "editor.autoIndent": "advanced",
+    "editor.fontSize": 16
 }

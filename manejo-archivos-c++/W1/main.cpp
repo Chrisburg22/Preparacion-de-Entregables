@@ -361,7 +361,7 @@ void pausar(){
 bool leerArchivoAlumnos(){
     ifstream archivo;// Salida o entrada de datos hacia archivos
     string cadena, subcadena;
-    int posIni, posFin, cuentaMaterias, j;
+    int posIni, posFin, cuentaMaterias, i, j;
     char caracter;
 
     cout << "Cargando archivo " << NOMBRE_ARCHIVO << "..." << endl;
@@ -370,21 +370,22 @@ bool leerArchivoAlumnos(){
     if( archivo.is_open() ){
         
         archivo >> cuentaMaterias;
-        for(int i=0; i<3 ; i++){
-        getline(archivo, cadena);
-        cout << cadena ;
-        }
-       
-        for(int i=0; i<MAX_MATERIAS ; i++){
+        archivo >> cadena;
+        cout << cuentaMaterias << " " << cadena << endl;
+        getline(archivo,cadena);
+        getline(archivo,cadena);
 
-            if(!materias[i].libre){
+        i=0;
+        while(!archivo.eof()){
+
+            if(materias[i].libre){
                 getline(archivo, cadena, DELIMITADOR_REGISTRO);
-                cout << "Registro leido: " << cadena << endl;
                 posIni = 0;
+                cout << cadena << endl;
                 posFin = cadena.find_first_of(DELIMITADOR_CAMPOS, posIni);
                 subcadena = cadena.substr(posIni,posFin);
                 materias[i].clave = subcadena;
-    
+
                 posIni = posFin+1;
                 posFin = cadena.find_first_of(DELIMITADOR_CAMPOS, posIni);
                 subcadena = cadena.substr(posIni, posFin-posIni);
@@ -394,15 +395,16 @@ bool leerArchivoAlumnos(){
                 posFin = cadena.find_first_of(DELIMITADOR_REGISTRO, posIni);//.at extrae un caracter de una cadena de texto, y recibe como parametro la posicion del caracter
                 subcadena = cadena.substr(posIni, posFin-posIni);
                 j=0;
-                materias[i].prerrequisitos[j++].requisitos = cadena;
-                for( j ; j<MAX_REQUISITOS ; j++){
-                    if(materias[i].prerrequisitos[j].existe){
+                materias[i].prerrequisitos[j++].requisitos = subcadena;
+                for( j ; j<3 ; j++){
                         subcadena = cadena.substr(posIni, posFin-posIni);
                         materias[i].prerrequisitos[j].requisitos = subcadena;
-                    }
                 }
             }
+            materias[i++].libre=false;
+            //i++;
         } 
+        pausar();
         archivo.close();
         return true;
     } else {
@@ -418,11 +420,10 @@ void guardarRegistros(int indice){
     int i= indice;
     int j=0;
 
-    cout << "Guardando archivo " << NOMBRE_ARCHIVO << "...";
     archivo.open(NOMBRE_ARCHIVO, ios::out);
 
     if( archivo.is_open() ){
-
+        archivo << indice << "  Registros" << endl;
         if(!materias[i].libre){
             if( materias[i].prerrequisitos[j].requisitos.length() <= 5 ){
                 archivo << left
