@@ -1,0 +1,8 @@
+
+***Tabla Recibo de Hororarios***
+Ingresos                  0.00
+(+) IVA                    0.00
+(=) Subtotal              0.00
+(-) Retencion ISR          0.00
+(-) Retencion IVA          0.00
+(=) Total                  0.00

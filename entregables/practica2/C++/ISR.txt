@@ -1,0 +1,5 @@
+
+***Tabla ISR***
+ISR                        0.00
+(-) ISR Retenido           0.00
+(=) ISR a Pagar              0.00

@@ -1,0 +1,7 @@
+
+***Tabla Ganancias***
+Ingresos                  0.00
+(-) Gastos                  0x564dfea852c0
+(=) Ganancia Bruta         0.00
+(-) ISR                    0.00
+(=) Ganancia Neta          0.00

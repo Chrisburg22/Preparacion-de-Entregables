@@ -1,0 +1,6 @@
+***Tabla IVA***
+IVA                        0.00
+(-) Gastos IVA               0.00
+(-) Retencion IVA          0.00
+(=) IVA a Pagar             0.00
+

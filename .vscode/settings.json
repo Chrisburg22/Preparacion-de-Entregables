@@ -6,7 +6,8 @@
         "*.tcc": "cpp",
         "iomanip": "cpp",
         "cstring": "cpp",
-        "iosfwd": "cpp"
+        "iosfwd": "cpp",
+        "string": "cpp"
     },
     "editor.autoIndent": "advanced",
     "editor.fontSize": 16
