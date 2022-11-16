@@ -13,7 +13,10 @@ int main(){
     printf("Memoria dinamica en C!\n\n");
 
 //Crea un espacio de memoria con la funcion malloc
+//Esto es para el uso de arreglos dinamicos    
+//Le dices cuantos bite de memoria vas a utilizar
     elementosOrigen = (int*)malloc(MAX_ELEMENTOS*sizeof(int));
+
 
     inicializarPrograma(elementosOrigen);
     imprimirArreglo(elementosOrigen, "elementosOrigen");

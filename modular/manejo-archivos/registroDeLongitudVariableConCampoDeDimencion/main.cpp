@@ -3,6 +3,7 @@
 #include <cstdlib>
 #include <cstring>
 
+#define FILE_NAME "students.dat"
 #define STUDENT_NAME_LENGTH 10
 #define MAX_STUDENTS 2
 
@@ -12,7 +13,7 @@ class Student{
     int id;
     char name[STUDENT_NAME_LENGTH+1];
 public:
-    Student(int id, clhar* name){
+    Student(int id, char* name){
         setId(id);
         setName(name);
     }
@@ -83,11 +84,53 @@ void writeStudent(ofstream& file, Student* s){
     file.write((char*)&id, nBytes=sizeof(int));
     file.write(&nameLength, sizeof(char));
     nBytes += sizeOf;
-    file.write(name, nameLength)Ç;
+    file.write(name, nameLength);
     nBytes += nameLength;
     cout << "Writen" << nBytes << "bytes" << endl;
 }
-//7:58 Write students
-//43:51 read student
-//53:43 readStudents
+void writeStudents(){
+    ofstream file;
+    file.open(FILE_NAME, ios::trunc | ios::binary);
+    if(file.is_open()){
+        for(int i=0;i<MAX_STUDENTS&&students[i]; i++){
+            writeStudent(file, students[i]);
+        }
+        file.close();
+    } else {
+        cout << "An error occured while writing student list" << endl;
+    }
+}
+
+Student* readStudent(ifstream& file){
+    int id = -1;
+    char nameLength;
+    char name[STUDENT_NAME_LENGTH+1];
+    file.read((char*)&id, sizeof(int)) ;
+    if(id!=-1){
+        cout << "Reading a student" << endl;
+        file.read(&nameLength,sizeof(char));
+        file.read(name, nameLength);
+        return new Student(id, name);
+    } else{
+        return nullptr;
+    }
+}
+
+void readStudents(){
+    ifstream file;
+    Student* s;
+    cout << "Reading students list" << endl;
+    file.open(FILE_NAME, ios::binary);
+    if(file.is_open()){
+        for(int i=0; !file.eof(); i++){
+            s = readStudent(file);
+            if(s!=nullptr){
+                students[i] = s;
+            }
+        }
+    file.close();
+    } else {
+        cout << "An error ocurred whiule reading student list" << endl;
+    }
+}
 
