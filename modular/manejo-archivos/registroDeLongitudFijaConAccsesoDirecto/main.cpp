@@ -141,7 +141,7 @@ void readStudents(){
 //Nuevas funciones
 int countWrittenRecords(ifstream& file){
     int writtenRecords;
-    file.seekg(0,ios_base::end);// IMvertigar la definicion y su uso
+    file.seekg(0,ios_base::end);// Investigar la definicion y su uso
     writtenRecords = file.tellg()/sizeof(Student); // Esta funcion te entrega el numero de byte en donde estaas posicionado
     file.seekg(0,ios_base::beg);
     cout << "Counter written records: " << writtenRecords << endl;

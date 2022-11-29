@@ -15,15 +15,22 @@ void inicializar(Lista* lista){
     lista->cuentaElementos = 0;
 }
 
-void insertarEnLista(tipo_elemento elemento, Lista* lista){
-    lista->elementos[lista->cuentaElementos++] = elemento;
+void insertarEnLista(tipo_elemento elemento, int posicion, Lista& lista){
+    int i;
+    if(posicion>=0 && posicion<=lista.cuentaElementos ){
+        for(i=lista.cuentaElementos;i>posicion;i++){
+            lista.elementos[i]=lista.elementos[i-1];
+        }
+        lista.elementos[posicion]=elemento;
+        lista.cuentaElementos++;
+    }
 }
 
-void suprimeDeLista(int posicion,Lista* lista){
+void suprimeDeLista(int posicion,Lista& lista){
     int i;
-    if(posicion>0 && posicion< lista->cuentaElementos){
-        for(i=0,lista->cuentaElementos-- ; i<lista->cuentaElementos; i++){
-            lista->elementos[i] = lista->elementos[i+1];
+    if(posicion>0 && posicion< lista.cuentaElementos){
+        for(i=0,lista.cuentaElementos-- ; i<lista.cuentaElementos; i++){
+            lista.elementos[i] = lista.elementos[i+1];
         }
     }
 }
